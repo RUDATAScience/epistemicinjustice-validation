@@ -21,6 +21,12 @@
 2. **偽の安定への収束（Kruskal-Wallis検定）**: マイノリティが優勢な初期状態からでも、巨大な$N$の下ではシステムバイアスによってマジョリティ側へと結果が強引に引き寄せられる現象を検証します。
 3. **Signal Cliff の特定**: 分散が初期の1%未満に落ち込む境界となる $N$ の閾値を自動検出します。
 
+
+git clone [https://github.com/YourUsername/signal-cliff-simulator.git](https://github.com/YourUsername/signal-cliff-simulator.git)
+cd signal-cliff-simulator
+python signal_cliff_simulator.py
+
+
 ## 必要要件 (Requirements)
 * Python 3.8+
 * `numpy`
@@ -29,5 +35,13 @@
 * `seaborn`
 * `pandas`
 
+パラメータ設定 (Parameters)コード内の以下の変数を変更することで、様々な社会状況をシミュレーション可能です。N_list: 検証するサンプルサイズの配列（デフォルト: $10^1 \sim 10^{10}$）J: 同調圧力・相互作用の強さ（デフォルト: 1.0）H: 外部磁場・システム的バイアス（デフォルト: 0.05）T: 社会的温度・ノイズ（デフォルト: 1.2）m_init: 初期オピニオンの平均値（デフォルト: -0.2 / マイノリティ優勢）
+
+
 ```bash
 pip install numpy scipy matplotlib seaborn pandas
+
+参考文献 (References)
+Galam, S., Gefen, Y., & Shapir, Y. (1982). Sociophysics: A new approach of sociological collective behaviour. I. Mean-behaviour description of a strike. Journal of Mathematical Sociology, 9(1), 1-13.
+
+Kawahata, Y. (2026). Epistemic Injustice Validation: Simulations of Signal Disappearance under Minority Suppression.
